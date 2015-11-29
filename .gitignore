@@ -11,3 +11,4 @@ blp/
 inst/include/
 src/Makevars
 .Rhistory
+packrat/src/

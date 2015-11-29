@@ -13,7 +13,7 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-library(quantmod)
+#library(quantmod)
 
 hello <- function() {
   print("Hello, world!")
