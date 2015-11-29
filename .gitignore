@@ -1,0 +1,13 @@
+packrat/lib*/
+\#*\#
+*~
+*.d
+*.rc
+*.o
+*.so
+.Rproj.user
+local/
+blp/
+inst/include/
+src/Makevars
+.Rhistory

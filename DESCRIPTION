@@ -1,0 +1,14 @@
+Package: Roanda
+Type: Package
+Title: R Interface to OANDA
+Version: 0.1
+Date: 2015-11-28
+Author: J. Puglisi <admin@meatwad.org>
+Maintainer: J. Puglisi <admin@meatwad.org>
+Description: An R interface to OANDA brokerage is provided by Roanda
+License: file LICENSE
+LazyData: TRUE
+Imports:
+    Rcpp (>= 0.12.1)
+LinkingTo:
+    Rcpp
