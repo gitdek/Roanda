@@ -18,3 +18,4 @@ library(quantmod)
 hello <- function() {
   print("Hello, world!")
 }
+

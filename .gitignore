@@ -11,3 +11,9 @@ blp/
 inst/include/
 src/Makevars
 .Rhistory
+packrat/init.R
+packrat/lib-ext
+packrat/lib-R
+packrat/packrat.lock
+packrat/packrat.opts
+packrat/src
