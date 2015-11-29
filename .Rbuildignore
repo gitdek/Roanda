@@ -10,3 +10,4 @@ NEWS\.md
 ^revdep$
 ^\.lintr$
 ^data-raw$
+src/worker\.cpp$

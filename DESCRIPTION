@@ -37,7 +37,7 @@ Suggests:
     lintr,
     rmarkdown,
     bitops,
-    Rcpp
+    Rcpp,
 License: GPL (>= 2)
 LazyData: true
 RoxygenNote: 5.0.1

@@ -54,5 +54,13 @@ NULL
   toset <- !(names(op.Roanda) %in% names(op))
   if(any(toset)) options(op.Roanda[toset])
 
+
   invisible()
 }
+
+.onUnload <- function(libpath) {
+  logging::logwarn("onUnload called. Unloading dynamic libraries.")
+  library.dynam.unload("Roanda", libpath)
+}
+
+

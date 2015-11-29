@@ -4,8 +4,8 @@
 #
 ###############################################################################
 
-package.require('rzmq')
-package.require('AWS.tools')
+# package.require('rzmq')
+# package.require('AWS.tools')
 
 # cl <-
 #   startCluster(

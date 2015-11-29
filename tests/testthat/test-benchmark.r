@@ -4,11 +4,11 @@ library(RCurl)
 library(jsonlite)
 options(microbenchmark.unit = "relative")
 
-
+library(testthat)
 context("api benchmark calls")
 
-.token        = Sys.getenv("OANDA_API_TOKEN")
-.accountID    = Sys.getenv("OANDA_API_ACCOUNT_ID")
+.token        <- getOption('Roanda.oandatoken')
+.accountID    <- getOption('Roanda.oandaaccountid')
 .accountType  = 'live'
 .lastInstrument = "EUR_USD"
 
@@ -18,7 +18,8 @@ api_call <- function() {
     Roanda::authorize(accountType = .accountType,accountID = .accountID,token = .token)
   instruments <-
     Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
-  NULL
+
+  instruments
 }
 
 test_that("api authorize", {
@@ -40,5 +41,5 @@ test_that("api instruments", {
 
 
 # R -d valgrind --vanilla < test-benchmark.r
-#res <- microbenchmark(api_call(), times = 200)
-#print(res)
+res <- microbenchmark(api_call(), times = 200)
+print(res)

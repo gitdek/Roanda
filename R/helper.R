@@ -5,28 +5,6 @@
 ###############################################################################
 
 
-os.specific <- new.env()
-
-.onAttach <- function(libname, pkgname) {
-  os.specific$os <- R.Version()$os
-  if (R.Version()$os == "mingw32") {
-    os.specific$suffix <- ".cmd"
-  } else {
-    os.specific$suffix <- ""
-  }
-
-  initLogging()
-
-  #global.assign('Global.logInit', TRUE, environ = .GlobalEnv)
-
-
-}
-
-.onUnload <- function(libpath) {
-  logging::logwarn("onUnload called. Unloading dynamic libraries.")
-  #library.dynam.unload("Roanda", libpath)
-}
-
 
 #' Shortcut for global variable assignment with logging and optional ZMQ storage backend.
 #'

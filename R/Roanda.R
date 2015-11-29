@@ -11,10 +11,8 @@ library(quantmod)
 library(blotter)
 library(FinancialInstrument)
 library(quantstrat)
-library(logging)
 library(plyr)
 
-options("getSymbols.warning4.0" = FALSE)
 
 .token        <- getOption('Roanda.oandatoken')
 .accountID    <- getOption('Roanda.oandaaccountid')
@@ -26,27 +24,6 @@ options("getSymbols.warning4.0" = FALSE)
 .active_orders = NULL
 .pending_orders = NULL
 
-
-initLogging <- function() {
-  require('logging')
-  logging::logReset()
-  logging::basicConfig()
-  logging::setLevel('FINEST')
-  logging::setLevel('DEBUG', getHandler('basic.stdout'))
-  logging::loginfo('Logging configuration set')
-}
-
-
-
-# Remove later.
-funkyInit <- function() {
-  pkgs  = c(
-    "base","httr","downloader","forecast","httr","jsonlite","lubridate","moments", "PerformanceAnalytics","quantmod","reshape2","RCurl","stats","scales","tseries","TTR","TSA","xts","zoo"
-  )
-  inst <- pkgs %in% installed.packages()
-  if (length(pkgs[!inst]) > 0)
-    install.packages(pkgs[!inst])
-}
 
 #' Connect to oanda authentication server.
 #'
@@ -75,7 +52,7 @@ authorize <-
 
       ret <- accountInfo(.accountType,.accountID,.token)
 
-      logging::logdebug(paste("authorize-> Account information received"))#, ret))
+      print(paste("authorize-> Account information received"))#, ret))
 
       if (is.null(ret)) {
         .time_authorized = NULL
@@ -84,11 +61,11 @@ authorize <-
 
       .time_authorized <- Sys.time()
 
-      logging::logdebug(paste("authorize-> Successfully authorized at", .time_authorized))
+      print(paste("authorize-> Successfully authorized at", .time_authorized))
 
     } else {
 
-      logging::logwarn(paste("Authenticated already! Timestamp of ", .time_authorized))
+      print(paste("Authenticated already! Timestamp of ", .time_authorized))
 
     }
 
