@@ -2,7 +2,14 @@ language: r
 sudo: required
 warnings_are_errors: true
 
+r_binary_packages:
+  - XML
+  - Rcpp
+  - knitr
+
 r_github_packages:
+  - rstudio/rmarkdown
+  - hadley/testthat
   - jimhester/covr
   - jimhester/lintr
 

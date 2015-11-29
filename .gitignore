@@ -17,3 +17,4 @@ packrat/src/
 packrat/lib/x86_64-pc-linux-gnu
 packrat/lib*/
 inst/doc
+.Renviron

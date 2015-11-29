@@ -17,7 +17,7 @@ api_call <- function() {
   x <-
     Roanda::authorize(accountType = .accountType,accountID = .accountID,token = .token)
   instruments <-
-    Roanda::getInstruments(AccountType = .accountType , Token = .token,AccountID = .accountID)
+    Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
   NULL
 }
 
@@ -30,10 +30,10 @@ test_that("api authorize", {
 
 test_that("api instruments", {
   i1 <-
-    Roanda::getInstruments(AccountType = .accountType , Token = .token,AccountID = .accountID)
+    Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
   expect_false(is.null(i1))
   i2 <-
-    Roanda::getInstruments(AccountType = .accountType , Token = .token,AccountID = .accountID)
+    Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
   expect_false(is.null(i2))
   expect_equivalent(i1,i2)
 })

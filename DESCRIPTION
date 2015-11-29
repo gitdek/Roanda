@@ -1,14 +1,13 @@
-Namespace: Roanda
 Package: Roanda
+Version: 1.9.1.9000
 Type: Package
 Title: R Interface to OANDA
-Version: 0.0.1.5000
 Date: 2015-11-28
 Author: J. Puglisi <admin@meatwad.org>
 Maintainer: J. Puglisi <admin@meatwad.org>
 Description: An R interface to OANDA brokerage is provided by Roanda
 Depends:
-    R (>= 3.1.0)
+    R (>= 3.0.2)
 Imports:
     Rcpp (>= 0.12.1),
     ggplot2,
@@ -16,9 +15,17 @@ Imports:
     quantmod,
     quantstrat,
     FinancialInstrument,
-    XML
+    XML,
+    AWS.tools,
+    jsonlite,
+    rzmq,
+    utils,
+    httr,
+    curl,
+    stats,
+    roxygen2,
+    rmarkdown
 LinkingTo: Rcpp
-RoxygenNote: 5.0.1
 Suggests:
     plyr,
     abind,
@@ -26,7 +33,11 @@ Suggests:
     tcltk,
     foreach,
     doParallel,
-    itertools,
-    iterators
-License: MIT + file LICENSE
+    iterators,
+    lintr,
+    rmarkdown,
+    bitops,
+    Rcpp
+License: GPL (>= 2)
 LazyData: true
+RoxygenNote: 5.0.1

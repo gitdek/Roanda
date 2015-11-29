@@ -9,3 +9,4 @@ NEWS\.md
 ^cran-comments\.md$
 ^revdep$
 ^\.lintr$
+^data-raw$
