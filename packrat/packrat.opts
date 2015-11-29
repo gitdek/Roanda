@@ -1,7 +1,7 @@
 auto.snapshot: TRUE
 use.cache: TRUE
 print.banner.on.startup: auto
-vcs.ignore.lib: TRUE
+vcs.ignore.lib: FALSE
 vcs.ignore.src: TRUE
 external.packages: 
 local.repos: 
