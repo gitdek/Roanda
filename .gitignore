@@ -10,14 +10,9 @@ blp/
 inst/include/
 src/Makevars
 .Rhistory
-<<<<<<< HEAD
-packrat/init.R
 packrat/lib-ext
 packrat/lib-R
-packrat/packrat.lock
-packrat/packrat.opts
 packrat/src
-=======
->>>>>>> dc57f515b04c499cd1e053b6bfc654e51f25c704
 packrat/src/
 packrat/lib/x86_64-pc-linux-gnu
+packrat/src/
