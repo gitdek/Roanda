@@ -5,3 +5,11 @@ rcpp_hello <- function() {
     .Call('Roanda_rcpp_hello', PACKAGE = 'Roanda')
 }
 
+timesTwo <- function(x) {
+    .Call('Roanda_timesTwo', PACKAGE = 'Roanda', x)
+}
+
+cond_sum_cpp <- function(x, y, z) {
+    .Call('Roanda_cond_sum_cpp', PACKAGE = 'Roanda', x, y, z)
+}
+

@@ -15,4 +15,5 @@ packrat/lib-R
 packrat/src
 packrat/src/
 packrat/lib/x86_64-pc-linux-gnu
-packrat/src/
+packrat/lib*/
+inst/doc

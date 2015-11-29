@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 # Roanda
 
 
@@ -16,13 +19,14 @@ Roanda is a new package that makes it incredibly easy to integrate with OANDA AP
 
 To install the stable version from CRAN, simply run the following from an R console:
 
-```r
+```
 install.packages("Roanda")
 ```
 
 To install the latest development builds directly from GitHub, run this instead:
 
-```r
+
+```
 if (!require("devtools"))
   install.packages("devtools")
 devtools::install_github("gitdek/Roanda")
