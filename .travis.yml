@@ -1,6 +1,6 @@
 language: r
 sudo: required
-warnings_are_errors: true
+warnings_are_errors: false
 
 r_binary_packages:
   - XML
@@ -13,8 +13,6 @@ r_github_packages:
   - jimhester/covr
   - jimhester/lintr
   - R-Finance/quantstrat
-  - armstrtw/AWS.tools
-  - armstrtw/rzmq
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
