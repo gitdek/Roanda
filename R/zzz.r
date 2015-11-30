@@ -1,6 +1,8 @@
-#' @importFrom utils available.packages contrib.url install.packages
-#'   installed.packages menu modifyList packageDescription
-#'   packageVersion remove.packages
+#' \pkg{Roanda} etc
+#' \code{Roanda} provides an interface to the oanda api
+#' @docType package
+#' @name Roanda
+
 NULL
 
 #' R OANDA Package
@@ -59,6 +61,11 @@ NULL
   invisible()
 }
 
+#' onUnload Hook
+#'
+#' @param libpath
+#'
+#'
 .onUnload <- function(libpath) {
   logging::logwarn("onUnload called. Unloading dynamic libraries.")
   library.dynam.unload("Roanda", libpath)

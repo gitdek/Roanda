@@ -6,9 +6,10 @@ Date: 2015-11-28
 Author: J. Puglisi <admin@meatwad.org>
 Maintainer: J. Puglisi <admin@meatwad.org>
 Description: An R interface to OANDA brokerage is provided by Roanda
-Depends:
-    R (>= 3.0.2)
-Imports:
+Depends: 
+    R (>= 3.0.2),
+    logging
+Imports: 
     Rcpp (>= 0.12.1),
     ggplot2,
     RCurl,
@@ -24,9 +25,11 @@ Imports:
     curl,
     stats,
     roxygen2,
-    rmarkdown
-LinkingTo: Rcpp
-Suggests:
+    rmarkdown,
+    microbenchmark,
+    logging,
+LinkingTo: Rcpp (>= 0.12.1),
+Suggests: 
     plyr,
     abind,
     testthat,
@@ -38,6 +41,9 @@ Suggests:
     rmarkdown,
     bitops,
     Rcpp,
+    knitr,
+    RCurl
 License: GPL (>= 2)
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000
+VignetteBuilder: knitr

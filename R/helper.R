@@ -6,6 +6,7 @@
 
 
 
+
 #' Shortcut for global variable assignment with logging and optional ZMQ storage backend.
 #'
 #' @param x A variable name.

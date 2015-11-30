@@ -1,9 +1,7 @@
 library(microbenchmark)
-library(Roanda)
 library(RCurl)
 library(jsonlite)
 library(testthat)
-
 
 context("api benchmark calls")
 options(microbenchmark.unit = "relative")
@@ -17,10 +15,10 @@ options(microbenchmark.unit = "relative")
 
 
 api_call <- function() {
-  x <-
-    Roanda::authorize(accountType = .accountType,accountID = .accountID,token = .token)
-  instruments <-
-    Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
+  #x <-
+  Roanda::authorize(accountType = .accountType,accountID = .accountID,token = .token)
+  #instruments <-
+  Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
 
   # instruments
 }
@@ -44,7 +42,10 @@ test_that("api instruments", {
   expect_equivalent(i1,i2)
 })
 
+#
+# test_that("repeated authentication.", {
+#   # R -d valgrind --vanilla < test-benchmark.r
+#   res <- expect_output(str(microbenchmark(api_call(), times = 3)),"3 obs")
+#   #str(res)
+# })
 
-# R -d valgrind --vanilla < test-benchmark.r
-res <- microbenchmark(api_call(), times = 200)
-print(res)

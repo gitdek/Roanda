@@ -11,6 +11,9 @@ requesting historical data from oanda easier defines stocks
 from vector of ticker symbols, a csv file, or a data.frame (package includes
 dataset)
 
+\pkg{Roanda} etc
+\code{Roanda} provides an interface to the oanda api
+
 R OANDA Package
 }
 \section{Package options}{
