@@ -2,10 +2,13 @@ library(microbenchmark)
 library(Roanda)
 library(RCurl)
 library(jsonlite)
+library(testthat)
+
+
+context("api benchmark calls")
 options(microbenchmark.unit = "relative")
 
-library(testthat)
-context("api benchmark calls")
+
 
 .token        <- getOption('Roanda.oandatoken')
 .accountID    <- getOption('Roanda.oandaaccountid')
@@ -19,7 +22,7 @@ api_call <- function() {
   instruments <-
     Roanda::getInstruments(accountType = .accountType , token = .token,accountID = .accountID)
 
-  instruments
+  # instruments
 }
 
 test_that("api authorize", {
@@ -28,6 +31,8 @@ test_that("api authorize", {
   expect_is(as.Date.ts(a),"Date",label  = "expecting datetime when authorized successfully.")
 })
 
+
+library('quantmod')
 
 test_that("api instruments", {
   i1 <-

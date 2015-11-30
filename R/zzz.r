@@ -52,7 +52,8 @@ NULL
   )
 
   toset <- !(names(op.Roanda) %in% names(op))
-  if(any(toset)) options(op.Roanda[toset])
+  if (any(toset))
+    options(op.Roanda[toset])
 
 
   invisible()

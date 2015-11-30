@@ -5,16 +5,6 @@
 
 using namespace Rcpp;
 
-// rcpp_hello
-List rcpp_hello();
-RcppExport SEXP Roanda_rcpp_hello() {
-BEGIN_RCPP
-    Rcpp::RObject __result;
-    Rcpp::RNGScope __rngScope;
-    __result = Rcpp::wrap(rcpp_hello());
-    return __result;
-END_RCPP
-}
 // timesTwo
 NumericVector timesTwo(NumericVector x);
 RcppExport SEXP Roanda_timesTwo(SEXP xSEXP) {

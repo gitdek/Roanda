@@ -6,16 +6,17 @@ using namespace Rcpp;
 //
 // Learn more about how to use Rcpp at:
 //
-//   http://www.rcpp.org/
+//   http://www.rcpp.org/ro
 //   http://adv-r.had.co.nz/Rcpp.html
 //
 // and browse examples of code using Rcpp at:
-// 
+//
 //   http://gallery.rcpp.org/
 //
 
 // [[Rcpp::export]]
-List rcpp_hello() {
+L
+  git add git
   CharacterVector x = CharacterVector::create("foo", "bar");
   NumericVector y   = NumericVector::create(0.0, 1.0);
   List z            = List::create(x, y);
