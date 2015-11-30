@@ -36,6 +36,10 @@ NULL
 #' @name Roanda
 NULL
 
+
+
+#' Hook for package onLoad
+#'
 .onLoad <- function(libname, pkgname) {
   op <- options()
   op.Roanda <- list(
