@@ -53,6 +53,7 @@ NULL
     Roanda.revdep.libpath = file.path(tempdir(), "R-lib"),
     Roanda.oandatoken = Sys.getenv("OANDA_API_TOKEN"),
     Roanda.oandaaccountid = Sys.getenv("OANDA_API_ACCOUNT_ID"),
+    Roanda.oandaaccounttype = Sys.getenv("OANDA_ACCOUNT_TYPE"),
     Roanda.awsaccesskey = Sys.getenv("AWS_ACCESS_KEY_ID"),
     Roanda.awssecretkey = Sys.getenv("AWS_SECRET_KEY")
   )
