@@ -17,9 +17,11 @@ library(plyr)
 .token        <- getOption('Roanda.oandatoken')
 .accountID    <- getOption('Roanda.oandaaccountid')
 .accountType  <- getOption('Roanda.oandaaccounttype')
-if (is.null(.accountType)) { .accountType  = 'live' }
+if(is.null(.accountType) || length(.accountType) < 1 {
+  .accountType = "practice" 
+ }
 .lastInstrument = "EUR_USD"
-.time_authorized <- NULL
+.time_authorized = NULL
 .instrument_cache = NULL
 .last_request = NULL
 .active_orders = NULL
